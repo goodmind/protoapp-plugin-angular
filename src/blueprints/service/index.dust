@@ -1,0 +1,14 @@
+import { Injectable } from '@angular/core'
+{#imports}
+import {.} from './{.|hyphenCase}'{/imports}
+
+@Injectable
+export default class {name} {
+    constructor(http: Http) { }
+{@each key=rpc}
+    {$key|camelCase|firstLetterInLowerCase}(request: {$value.request}): Observable<{$value.response}> {{#$value.options}{@query key="(google.api.http)"}
+        return this.http.post(`{@template str=post ctx="request" /}`, request.{body})
+            .map(res => res.json()){/query}{/$value.options}
+    }
+{/each}
+}

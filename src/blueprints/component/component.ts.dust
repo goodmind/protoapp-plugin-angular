@@ -1,0 +1,17 @@
+import { Component, OnInit } from '@angular/core';
+import {service} from '../{service|hyphenCase}.service'
+
+@Component({
+  moduleId: module.id,
+  selector: '{name|hyphenCase}',
+  templateUrl: '{name|hyphenCase}.component.html',
+  styleUrls: ['{name|hyphenCase}.component.css'],
+  providers: [{service}]
+})
+export class {name}Component implements OnInit {
+    constructor(private {service|camelCase|firstLetterInLowerCase}: {service}) { }
+
+    ngOnInit() {
+        {@gt key=params.length value=0}this.{name|camelCase|firstLetterInLowerCase} = this.{service|camelCase|firstLetterInLowerCase}.{method|camelCase|firstLetterInLowerCase}({#params}{.}{/params}){/gt}
+    }
+}
