@@ -1,7 +1,7 @@
 {
   "name": "protoapp-plugin-angular",
   "version": "0.0.0-placeholder",
-  "description": "",
+  "description": "Protoapp plugin for Angular 2",
   "main": "src/index.js",
   "release": {
     "branch": "master"
