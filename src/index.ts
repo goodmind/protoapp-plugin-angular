@@ -1,7 +1,6 @@
 import { generateComponent } from './blueprints/component'
 import { generateService } from './blueprints/service'
 import { generateInterface } from './blueprints/interface'
-
 import * as path from 'path'
 
 export interface Context {
